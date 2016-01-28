@@ -5,14 +5,18 @@ package javaapplication5;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author c0663712
  */
 public class Student {
-    
-      public Student() {
+
+    private String name;
+    private String id;
+    private String gender;
+    private double grade;
+
+    public Student() {
         this.name = "";
         this.id = "";
         this.gender = "";
@@ -26,13 +30,7 @@ public class Student {
         this.grade = grade;
     }
 
-   
-    String name;
-    String id;
-    String gender;
-    double grade;
-    
-     public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -63,26 +61,23 @@ public class Student {
     public void setGrade(double grade) {
         this.grade = grade;
     }
-    
-    public boolean eaquals(Student obj){
-        if (this.getClass()!= obj.getClass())
-                return false;
-        
-        if(this.getName().equals(obj.getName())&&this.getId().equals(obj.getId()))
+
+    public boolean eaquals(Student obj) {
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+
+        if (this.getName().equals(obj.getName()) && this.getId().equals(obj.getId())) {
             return true;
-        else
-             return false;
-        
-        
-        
-        //return this.equals(obj);
+        } else {
+            return false;
+        }
+
     }
-    
-    //@Override
-    public String toString(){
-        return "{\"name\":\""+getName()+"\",\"id\":\""+getId()+"\",\"gender\":\""+getGender()+"\",\"grade\":"+getGrade()+"}";
-        //String s =this.toString();
-       // return s;
+
+    @Override
+    public String toString() {
+        return "{\"name\":\"" + getName() + "\",\"id\":\"" + getId() + "\",\"gender\":\"" + getGender() + "\",\"grade\":" + getGrade() + "}";
     }
-    
+
 }

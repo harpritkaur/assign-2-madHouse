@@ -137,13 +137,69 @@ public class StudentTest {
         instance.setGrade(grade);
        
     }
-
-    /**
-     * Test of eaquals method, of class Student.
+    
+    
+     /**
+     * Test of setName method, of class Student.
      */
     @Test
-    public void testEaquals() {
-        System.out.println("eaquals");
+    public void testSetStudentName() {
+        System.out.println("setStudentName");
+        Student instance = new Student("Sukhjeet","c0665523","male",92.00);
+        String expResult = "Sukhjeet";
+        String result = instance.getName();
+        assertEquals(expResult, result);       
+    }
+
+    /**
+     * Test of getId method, of class Student.
+     */
+    @Test
+    public void testGetStudentId() {
+        System.out.println("getStudentId");
+        Student instance = new Student("Sukhjeet","c0665523","male",92.00);
+        String expResult = "c0665523";
+        String result = instance.getId();
+        assertEquals(expResult, result);
+       
+    }
+
+    
+
+    /**
+     * Test of getGender method, of class Student.
+     */
+    @Test
+    public void testGetStudentGender() {
+        System.out.println("getStudentGender");
+        Student instance = new Student("Sukhjeet","c0665523","male",92.00);
+        String expResult = "male";
+        String result = instance.getGender();
+        assertEquals(expResult, result);
+       
+    }
+
+   
+
+    /**
+     * Test of getGrade method, of class Student.
+     */
+    @Test
+    public void testGetStudentGrade() {
+        System.out.println("getStudentGrade");
+        Student instance = new Student("Sukhjeet","c0665523","male",92.00);
+        double expResult = 92.00;
+        double result = instance.getGrade();
+        assertEquals(expResult, result,0.0);
+       
+    }
+
+    /**
+     * Test of equals method, of class Student.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
         Student obj = new Student();
         Student instance = new Student();
         boolean expResult = true;
@@ -151,6 +207,8 @@ public class StudentTest {
         assertEquals(expResult, result);
        
     }
+    
+
 
     /**
      * Test of toString method, of class Student.
